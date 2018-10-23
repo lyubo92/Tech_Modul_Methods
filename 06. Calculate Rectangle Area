@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class rectangleArea {
+    public static double calculateArea(double a, double b){
+        double area = a * b;
+        return area;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double width = Double.parseDouble(input.nextLine());
+        double height = Double.parseDouble(input.nextLine());
+        double area = calculateArea(width, height);
+        System.out.printf("%.0f", area);
+    }
+}
