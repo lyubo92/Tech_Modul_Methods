@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class orders {
+    public static void order(String item, int times){
+        double sum = 0;
+        switch (item){
+            case "coffee":
+                sum = times * 1.5;
+                System.out.printf("%.2f", sum); break;
+            case "water":
+                sum = times * 1.00;
+                System.out.printf("%.2f", sum); break;
+            case "coke":
+                sum = times * 1.4;
+                System.out.printf("%.2f", sum); break;
+            case "snacks":
+                sum = times * 2.00;
+                System.out.printf("%.2f", sum); break;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String item = input.nextLine();
+        int times = Integer.parseInt(input.nextLine());
+        order(item, times);
+    }
+}
