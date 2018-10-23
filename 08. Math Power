@@ -1,0 +1,18 @@
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.util.Scanner;
+
+public class mathPower {
+    public static BigDecimal numPower(String num, int pow){
+        MathContext mc = new MathContext(0);
+        BigDecimal numPow = new BigDecimal(num).pow(pow, mc);
+        return numPow;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String number = input.nextLine();
+        int power = Integer.parseInt(input.nextLine());
+        BigDecimal result = numPower(number, power);
+        System.out.print(result);
+    }
+}
